@@ -17,6 +17,7 @@ import sangeetHangingDecor from "@/public/hanging_decor.avif";
 import discoBall from "@/public/disco_ball.avif";
 import peacock from "@/public/peacock.avif";
 import HaldiSection from "./sections/HaldiSection";
+import SangeetSection from "./sections/SangeetSection";
 
 export default function Home() {
   return (
@@ -239,34 +240,19 @@ export default function Home() {
           </div>
         </div>
         <HaldiSection />
-        <div className="py-15">
-          <div className="relative h-100">
+        <SangeetSection />
+        <div className="pt-20">
+          <p className="text-center text-[#c53974] text-4xl leading-10 font-allura pb-5">
+            See you there!
+          </p>
+          <div className="animate-peacock">
             <Image
-              src={sangeet}
-              alt=""
-              width={280}
-              className="mx-auto relative z-5"
-            />
-            <Image
-              src={sangeetHangingDecor}
-              alt=""
-              width={180}
-              className="mx-auto absolute top-[45%] left-1/2 -translate-x-1/2 z-4 animate-hang"
-            />
-            <Image
-              src={discoBall}
-              alt=""
-              width={120}
-              className="mx-auto absolute top-[60%] left-1/2 -translate-x-1/2 z-3 animate-sway"
+              src={peacock}
+              alt="peacock"
+              width={512}
+              className="scale-120"
             />
           </div>
-          <div className="text-[#1711a0] text-center flex flex-col justify-center items-center gap-2">
-            <p className="text-xl">12th Feburary</p>
-            <p className="text-base">7 PM Onwards</p>
-          </div>
-        </div>
-        <div className="pt-20 animate-peacock">
-          <Image src={peacock} alt="peacock" width={512} className="w-[110%]" />
         </div>
       </div>
     </main>

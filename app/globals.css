@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --font-gillian-regular: var(--font-gillian-regular);
   --font-jaini: var(--font-jaini);
+  --font-allura: var(--font-allura);
 }
 
 html,
@@ -55,6 +56,12 @@ body {
   transform-origin: bottom center;
 }
 
+.animate-skew {
+  animation: skew 2s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
 @keyframes sway {
   0% {
     transform: rotateZ(calc(var(--base-rotation, 0deg) + 0deg));
@@ -93,12 +100,24 @@ body {
   }
 }
 
+@keyframes skew {
+  0% {
+    transform: skewX(0) skewY(0);
+  }
+  50% {
+    transform: skewX(3deg) skewY(3deg);
+  }
+  100% {
+    transform: skewX(0) skewY(0);
+  }
+}
+
 @keyframes peacock {
   0% {
     transform: rotate(0) skewX(0);
   }
   50% {
-    transform: rotate(3deg) skewX(3deg);
+    transform: rotate(4deg) skewX(4deg);
   }
   100% {
     transform: rotate(0) skewX(0);
