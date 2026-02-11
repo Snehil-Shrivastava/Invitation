@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Jaini, Allura } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import PageProgress from "./components/PageProgress";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,6 +48,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${gillianReg.variable} ${jaini.variable} ${allura.variable} antialiased relative`}
         suppressHydrationWarning={true}
       >
+        <PageProgress />
         {children}
       </body>
     </html>

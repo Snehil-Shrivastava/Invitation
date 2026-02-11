@@ -13,6 +13,7 @@ import HaldiSection from "./sections/HaldiSection";
 import SangeetSection from "./sections/SangeetSection";
 import Footer from "./sections/Footer";
 import BaraatSection from "./sections/BaraatSection";
+import WeddingSection from "./sections/WeddingSection";
 
 export default function Home() {
   return (
@@ -237,6 +238,7 @@ export default function Home() {
         <HaldiSection />
         <SangeetSection />
         <BaraatSection />
+        <WeddingSection />
         <Footer />
       </div>
     </main>
