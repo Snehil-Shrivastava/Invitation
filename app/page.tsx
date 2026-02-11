@@ -11,7 +11,12 @@ import buddha from "@/public/buddha.avif";
 import eventTime from "@/public/decorative_time.avif";
 import haldi from "@/public/haldi.avif";
 import hangingFlower from "@/public/hanging_flowers.avif";
+import haldiGrp from "@/public/haldi_group.avif";
+import sangeet from "@/public/sangeet_banner.avif";
+import sangeetHangingDecor from "@/public/hanging_decor.avif";
+import discoBall from "@/public/disco_ball.avif";
 import peacock from "@/public/peacock.avif";
+import HaldiSection from "./sections/HaldiSection";
 
 export default function Home() {
   return (
@@ -108,30 +113,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="relative pt-5 pb-15">
-          {/* <div className="h-100 w-70 relative -left-20 bg-[#919d6b] rounded-full">
-            <Image
-              src={flowerGroup}
-              alt="flower group"
-              width={512}
-              height={918}
-              className="relative -bottom-10 -right-12 scale-145"
-            />
-          </div> */}
-          {/* <div className="h-100 w-70 relative -left-20 bg-[#919d6b] rounded-full z-10"> */}
-          {/* <div
-              className="absolute inset-0 rounded-full"
-              style={{ clipPath: "circle(58% at 50% 50%)" }}
-            > */}
-          {/* <Image
-              src={flowerGroup}
-              alt="flower group"
-              width={512}
-              height={918}
-              className="relative -botom-10 -right-12 scale-145"
-            /> */}
-          {/* </div> */}
-          {/* </div> */}
+        <div className="relative pt-15 pb-20">
           <div className="h-100 w-70 relative -left-20 bg-[#919d6b] rounded-full">
             <Image
               src={flowerGroup}
@@ -216,7 +198,7 @@ export default function Home() {
             <p>Dr. Rohie Jawarker and Jawarker family</p>
           </div>
         </div>
-        <div className="pb-20">
+        <div className="pb-25">
           <div className="h-80">
             <div
               className="-right-60 relative animate-sway"
@@ -256,27 +238,31 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div>
-          <div className="text-[#c53974] font-semibold text-4xl text-center pb-20">
-            <h3>Events</h3>
-          </div>
-          <div>
+        <HaldiSection />
+        <div className="py-15">
+          <div className="relative h-100">
             <Image
-              src={haldi}
-              alt="Haldi"
+              src={sangeet}
+              alt=""
               width={280}
-              className="mx-auto relative z-2"
+              className="mx-auto relative z-5"
             />
             <Image
-              src={hangingFlower}
-              alt="Haldi"
-              width={155}
-              className="mx-auto relative -top-6 animate-hang z-1"
+              src={sangeetHangingDecor}
+              alt=""
+              width={180}
+              className="mx-auto absolute top-[45%] left-1/2 -translate-x-1/2 z-4 animate-hang"
+            />
+            <Image
+              src={discoBall}
+              alt=""
+              width={120}
+              className="mx-auto absolute top-[60%] left-1/2 -translate-x-1/2 z-3 animate-sway"
             />
           </div>
-          <div className="text-center text-[#b29862] text-lg">
-            <p>12th Feburary</p>
-            <p>Dress Code : Yellow</p>
+          <div className="text-[#1711a0] text-center flex flex-col justify-center items-center gap-2">
+            <p className="text-xl">12th Feburary</p>
+            <p className="text-base">7 PM Onwards</p>
           </div>
         </div>
         <div className="pt-20 animate-peacock">

@@ -57,15 +57,15 @@ body {
 
 @keyframes sway {
   0% {
-    transform: rotate(calc(var(--base-rotation, 0deg) + 0deg));
+    transform: rotateZ(calc(var(--base-rotation, 0deg) + 0deg));
   }
   50% {
-    transform: rotate(
+    transform: rotateZ(
       calc(var(--base-rotation, 0deg) + var(--sway-angle, 5deg))
     );
   }
   100% {
-    transform: rotate(calc(var(--base-rotation, 0deg) + 0deg));
+    transform: rotateZ(calc(var(--base-rotation, 0deg) + 0deg));
   }
 }
 
