@@ -54,12 +54,17 @@ body {
 .animate-peacock {
   animation: peacock 5s ease-in-out infinite;
   transform-origin: bottom center;
+  will-change: transform;
 }
 
 .animate-skew {
   animation: skew 2s ease-in-out infinite;
   transform-origin: center center;
   will-change: transform;
+}
+
+.animate-move {
+  animation: forwardsMotion 5s ease-in-out infinite;
 }
 
 @keyframes sway {
@@ -105,7 +110,7 @@ body {
     transform: skewX(0) skewY(0);
   }
   50% {
-    transform: skewX(3deg) skewY(3deg);
+    transform: skewX(2deg) skewY(2deg);
   }
   100% {
     transform: skewX(0) skewY(0);
@@ -121,5 +126,14 @@ body {
   }
   100% {
     transform: rotate(0) skewX(0);
+  }
+}
+
+@keyframes forwardsMotion {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-30px) translateY(10px);
   }
 }

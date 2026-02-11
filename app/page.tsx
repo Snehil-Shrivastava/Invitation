@@ -9,15 +9,10 @@ import flowerFragment from "@/public/flower_fragment.svg";
 import flowerClosed from "@/public/flower_closed.svg";
 import buddha from "@/public/buddha.avif";
 import eventTime from "@/public/decorative_time.avif";
-import haldi from "@/public/haldi.avif";
-import hangingFlower from "@/public/hanging_flowers.avif";
-import haldiGrp from "@/public/haldi_group.avif";
-import sangeet from "@/public/sangeet_banner.avif";
-import sangeetHangingDecor from "@/public/hanging_decor.avif";
-import discoBall from "@/public/disco_ball.avif";
-import peacock from "@/public/peacock.avif";
 import HaldiSection from "./sections/HaldiSection";
 import SangeetSection from "./sections/SangeetSection";
+import Footer from "./sections/Footer";
+import BaraatSection from "./sections/BaraatSection";
 
 export default function Home() {
   return (
@@ -241,19 +236,8 @@ export default function Home() {
         </div>
         <HaldiSection />
         <SangeetSection />
-        <div className="pt-20">
-          <p className="text-center text-[#c53974] text-4xl leading-10 font-allura pb-5">
-            See you there!
-          </p>
-          <div className="animate-peacock">
-            <Image
-              src={peacock}
-              alt="peacock"
-              width={512}
-              className="scale-120"
-            />
-          </div>
-        </div>
+        <BaraatSection />
+        <Footer />
       </div>
     </main>
   );
