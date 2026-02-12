@@ -65,6 +65,11 @@ body {
 
 .animate-move {
   animation: forwardsMotion 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-rotate {
+  animation: rotate 5s ease-in-out infinite;
 }
 
 @keyframes sway {
@@ -135,5 +140,17 @@ body {
   }
   100% {
     transform: translateX(-30px) translateY(10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(5deg);
+  }
+  100% {
+    transform: rotateZ(0);
   }
 }
