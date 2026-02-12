@@ -69,7 +69,7 @@ body {
 }
 
 .animate-rotate {
-  animation: rotate 5s ease-in-out infinite;
+  animation: rotate var(--rotate-duration, 5s) ease-in-out infinite;
 }
 
 @keyframes sway {
@@ -145,12 +145,14 @@ body {
 
 @keyframes rotate {
   0% {
-    transform: rotateZ(0);
+    transform: rotateZ(calc(var(--base-rotation, 0deg) + 0deg));
   }
   50% {
-    transform: rotateZ(5deg);
+    transform: rotateZ(
+      calc(var(--base-rotation, 0deg) + var(--rotate-angle, 5deg))
+    );
   }
   100% {
-    transform: rotateZ(0);
+    transform: rotateZ(calc(var(--base-rotation, 0deg) + 0deg));
   }
 }

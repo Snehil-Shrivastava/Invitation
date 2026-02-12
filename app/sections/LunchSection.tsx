@@ -38,7 +38,11 @@ const LunchSection = () => {
           src={LunchFlower1}
           alt="lunch plate"
           width={280}
-          className="absolute -left-17 top-15 rotate-z-150 z-3"
+          className="absolute -left-17 top-15 rotate-z-150 z-3 animate-rotate"
+          style={{
+            // @ts-expect-error custom style
+            "--base-rotation": "150deg",
+          }}
         />
         <Image
           src={LunchFlower2}
